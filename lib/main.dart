@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Time Stream'),
+      home: new MyHomePage(title: 'Adding Random Numbers'),
     );
   }
 }
@@ -63,14 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Current Time:',
+              '',
             ),
             StreamBuilder(
                 stream: sumStream,
                 builder: (BuildContext context, AsyncSnapshot<int> snapshot) =>
                     Text(
                       '${snapshot.data}',
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.body1,
                     )),
           ],
         ),
